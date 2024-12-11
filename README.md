@@ -2,6 +2,10 @@
 
 This web application is designed for conducting blind tests in a unique and collaborative manner. Unlike traditional blind tests, where one person manages the entire process, this app enables full participation without any single individual having complete knowledge of the test setup. The process involves two participants collaborating to shuffle and rename the products, ensuring anonymity and fairness.
 
+## Live Demo
+
+Try it out: [Blind Test App Demo](https://danielmroczek.github.io/blind-test/)
+
 ## How It Works
 
 The steps are as follows:  
