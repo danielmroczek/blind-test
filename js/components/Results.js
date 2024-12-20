@@ -10,8 +10,8 @@ export function Results() {
                     .sort((a, b) => a.secondNumber - b.secondNumber)
                     .map(product => `
                         <div class="product-item">
-                            Product ${product.secondNumber} = ${product.name}
-                            (Original: ${product.firstNumber})
+                            ${product.secondNumber} = <strong>${product.name}</strong>
+                            <em>(Original: ${product.firstNumber})</em>
                         </div>
                     `).join('')}
             </div>
