@@ -27,7 +27,7 @@ export function ProductSetup() {
             <div class="step-container" style="background-color: ${COLORS.STEP_1}">
                 <h2>Step 1: Select number of products</h2>
                 <form onsubmit="handleProductSetupSubmit(event)">
-                    <input type="number" name="numberOfProducts" class="input" min="2" required>
+                    <input type="number" name="numberOfProducts" class="input" min="2" required autofocus>
                     <button type="submit" class="button">Next</button>
                 </form>
             </div>
@@ -39,7 +39,7 @@ export function ProductSetup() {
             <h2>Step 2: Enter product names</h2>
             <form onsubmit="handleProductSetupSubmit(event)">
                 ${Array(state.numberOfProducts).fill(0).map((_, i) => `
-                    <input type="text" name="product${i}" class="input" placeholder="Product ${i + 1}" required>
+                    <input type="text" name="product${i}" class="input" placeholder="Product ${i + 1}" required ${i === 0 ? 'autofocus' : ''}>
                 `).join('')}
                 <button type="submit" class="button">Next</button>
             </form>

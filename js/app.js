@@ -5,6 +5,7 @@ import { FirstNumbering } from './components/FirstNumbering.js';
 import { Break } from './components/Break.js';
 import { SecondNumbering } from './components/SecondNumbering.js';
 import { Results } from './components/Results.js';
+import { focusFirstInput } from './utils.js';
 
 // Make renderApp globally available
 window.renderApp = renderApp;
@@ -12,6 +13,13 @@ window.renderApp = renderApp;
 // Clean up any existing handlers before setting new ones
 window.removeEventListener('nextStep', nextStep);
 window.addEventListener('nextStep', nextStep);
+
+// Add keyboard handler
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && state.step > 2 && state.step !== 7) {
+        window.dispatchEvent(new CustomEvent('nextStep'));
+    }
+});
 
 function renderStep() {
     switch (state.step) {
@@ -40,6 +48,7 @@ function renderApp() {
             ${renderStep()}
         </div>
     `;
+    focusFirstInput();
 }
 
 renderApp();

@@ -13,3 +13,8 @@ export const setState = (newState) => {
     Object.assign(state, newState);
     renderApp();
 };
+
+export const setStateWithoutRendering = (newState) => {
+    Object.assign(state, newState);
+};
+
