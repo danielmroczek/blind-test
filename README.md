@@ -2,6 +2,14 @@
 
 This web application is designed for conducting blind tests in a unique and collaborative manner. Unlike traditional blind tests, where one person manages the entire process, this app enables full participation without any single individual having complete knowledge of the test setup. The process involves two participants collaborating to shuffle and rename the products, ensuring anonymity and fairness.
 
+## Personal Story
+
+The idea for this app emerged from a real-life situation. During a gathering with friends, we wanted to determine which beer was truly the best through a blind taste test. However, we faced a dilemma: traditional blind tests require one person to act as a coordinator who doesn't participate in the tasting, but rather handles the pouring and numbering of drinks. In our group of four, everyone wanted to participate in the tasting, so we initially abandoned the idea.
+
+The challenge kept nagging at me, and I often pondered whether it would be possible to conduct a blind test where everyone could participate. Then, during a shower thought moment, it hit me - a method that could work by involving two people in the "mixing" process, ensuring that no single person would have complete knowledge of the setup, thus maintaining objectivity.
+
+This application was built to facilitate such tests, and I'm happy to report that we successfully used it for our beer tasting session, with everyone able to participate and discover their true favorite beer.
+
 ## Live Demo
 
 Try it out: [Blind Test App Demo](https://danielmroczek.github.io/blind-test/)
@@ -30,7 +38,7 @@ This collaborative approach ensures impartiality and enhances the blind testing 
 ## Setup
 
 1. Clone the repository
-2. Open index.html in a modern web browser
+2. Open `index.html` in a modern web browser
 3. No build process or dependencies required
 
 ## License
