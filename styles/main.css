@@ -1,13 +1,13 @@
 :root {
-    --spacing-xs: 0.5em;
-    --spacing-sm: 1em;
-    --spacing-md: 1.5em;
-    --spacing-lg: 2em;
-    --border-radius: 0.5em;
-    --border-width: 0.125em;
-    --font-size-base: 1em;
-    --font-size-lg: 1.25em;
-    --font-size-xl: 2em;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --border-radius: 0.5rem;
+    --border-width: 0.125rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 2rem;
     --white-alpha-10: rgba(255, 255, 255, 0.1);
     --white-alpha-20: rgba(255, 255, 255, 0.2);
     --white-alpha-60: rgba(255, 255, 255, 0.6);
@@ -17,7 +17,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                 Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     overflow-x: hidden;
 }
 
@@ -35,10 +36,7 @@ body {
     padding: var(--spacing-sm);
     color: white;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,73 +52,73 @@ body {
     background-color: transparent;
     cursor: pointer;
     font-size: clamp(var(--font-size-base), 4vw, var(--font-size-lg));
-    margin-top: 1.25em;
+    margin-top: 1.25rem;
     color: white;
     transition: all 0.3s ease;
     width: 100%;
-    max-width: 18.75em;
+    max-width: 18.75rem;
     -webkit-tap-highlight-color: transparent;
-}
 
-.button:hover {
-    background-color: var(--white-alpha-10);
-}
+    &:hover {
+        background-color: var(--white-alpha-10);
+    }
 
-.button:active {
-    transform: scale(0.98);
+    &:active {
+        transform: scale(0.98);
+    }
 }
 
 .input {
-    padding: 0.75em var(--spacing-md);
+    padding: 0.75rem var(--spacing-md);
     border: var(--border-width) solid var(--white-alpha-80);
     border-radius: var(--border-radius);
-    margin: 0.5em 0;
-    font-size: clamp(var(--font-size-base), 4vw, 1.125em);
+    margin: 0.5rem 0;
+    font-size: clamp(var(--font-size-base), 4vw, 1.125rem);
     width: 100%;
-    max-width: 18.75em;
+    max-width: 18.75rem;
     box-sizing: border-box;
     background: var(--white-alpha-10);
     color: white;
-}
 
-.input::placeholder {
-    color: var(--white-alpha-60);
+    &::placeholder {
+        color: var(--white-alpha-60);
+    }
 }
 
 .product-list {
-    margin: 1.25em 0;
+    margin: 1.25rem 0;
     width: 100%;
-    max-width: 25em;
+    max-width: 25rem;
     padding: 0 var(--spacing-sm);
     box-sizing: border-box;
 }
 
 .product-item {
-    margin: 0.625em 0;
+    margin: 0.625rem 0;
     padding: var(--spacing-md);
     background: var(--white-alpha-10);
     border-radius: var(--border-radius);
     border: var(--border-width) solid var(--white-alpha-20);
-    font-size: clamp(0.875em, 3.5vw, 1.125em);
+    font-size: clamp(0.875rem, 3.5vw, 1.125rem);
     word-break: break-word;
 }
 
 h2 {
     margin: var(--spacing-sm) 0 var(--spacing-lg);
     text-align: center;
-    font-size: clamp(1.25em, 5vw, var(--font-size-xl));
+    font-size: clamp(1.25rem, 5vw, var(--font-size-xl));
     padding: 0 var(--spacing-sm);
 }
 
 p {
     text-align: center;
-    font-size: clamp(0.875em, 3.5vw, 1.125em);
+    font-size: clamp(0.875rem, 3.5vw, 1.125rem);
     padding: 0 var(--spacing-sm);
 }
 
 form {
     width: 100%;
-    max-width: 25em;
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +126,27 @@ form {
     box-sizing: border-box;
 }
 
-@media (max-height: 31.25em) {
+#info-link {
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    opacity: 0.8;
+    
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        /* color: inherit; */
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+@media (max-height: 31.25rem) {
     .step-container {
         position: relative;
         min-height: auto;
@@ -136,12 +154,12 @@ form {
     }
 }
 
-@media (max-width: 22.5em) {
+@media (max-width: 22.5rem) {
     .step-container {
         padding: var(--spacing-sm) var(--spacing-xs);
     }
     
     .product-item {
-        padding: 0.75em;
+        padding: 0.75rem;
     }
 }
